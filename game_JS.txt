@@ -1,0 +1,8 @@
+  Game development
+
+* <canvas></canvas> # render game inside
+    <canvas id="myCanvas" width="480" height="320"></canvas>
+
+* const canvas=document.getElementById("myCanvas");
+  const ctx=canvas.getContext("2d");
+  
