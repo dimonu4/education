@@ -11,8 +11,14 @@
 	  <h1>Hi there</h1>
 	  <canvas id='main'height='320'width='240' background= 'grey'>hell</canvas>
 	  <script>
-            const ctx = document.getElementById('main')
-	    ctx.getContext('2d')
+            const canvas = document.getElementById('main')
+	    const ctx = canvas.getContext('2d')
+	   
+	    ctx.beginPath()
+	    ctx.rect(20,20,20,20);
+	    ctx.fillStyle = 'black';
+	    ctx.fill()
+	    ctx.closePath()
 	    
 	  </script>
 	</body>
