@@ -5,4 +5,14 @@
 
 * const canvas=document.getElementById("myCanvas");
   const ctx=canvas.getContext("2d");
-  
+  # to store the 2D rendering context
+
+* ctx.beginPath();
+  ctx.rect(20,40,50,50); # x,y,height,width of rectangle
+  ctx.fillStyle = '#FF0000'; /"red" /'rgb(0 0 255 / 50%)'
+  ctx.fill();
+  ctx.closePath();
+
+* ctx.arc(240,160,20,0,Math.PI*2,false); # x,y of arc center, arc radius, start and end angle in radians, direction of drawing(false for clockwise, default or anti-clockwise -true)
+
+* ctx.stroke() # color only the outer stroke
