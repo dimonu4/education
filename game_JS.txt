@@ -16,3 +16,7 @@
 * ctx.arc(240,160,20,0,Math.PI*2,false); # x,y of arc center, arc radius, start and end angle in radians, direction of drawing(false for clockwise, default or anti-clockwise -true)
 
 * ctx.stroke() # color only the outer stroke
+
+* ctx.clearRect(x, y, a, b) # x and y coordinates of top left corner, and a and b coordinates of the bottom right corner of a rectangle, the whole area covered by this rectangle will be cleared of any content previously painted there
+
+* document.location.reload() # reload page

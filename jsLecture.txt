@@ -1,0 +1,24 @@
+   JS
+* Array:
+  let arr = new Array();
+  let arr = [];
+
+  let a = ['1','2','3'];
+  a[0] # call first element of Array
+  a[1] = '4' # assign 4 to second element
+  a[3] = '5' # add new element to array
+  a.length # return length of array
+  a.at(-1) # return last element of array, same as a[ a.length -1 ]
+  push - add element in the end of Array
+  shift - delete first element of Array, return it and shift second element to first position
+  pop - delete last element of Array and return it
+  unshift - add element in the begin of Array
+  
+* Iteration of Array:
+  for(let i=0; i< arr.length;i++){
+    alert( arr[i] )
+  }
+  for(let el of arr){
+    alert( el )
+  }
+  
