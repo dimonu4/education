@@ -20,3 +20,7 @@
 * ctx.clearRect(x, y, a, b) # x and y coordinates of top left corner, and a and b coordinates of the bottom right corner of a rectangle, the whole area covered by this rectangle will be cleared of any content previously painted there
 
 * document.location.reload() # reload page
+
+* ctx.font = "16px Arial@"; 
+  ctx.fillText(`Score: ${value}`, x, y); #draw text
+
