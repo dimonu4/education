@@ -23,4 +23,4 @@
 
 * ctx.font = "16px Arial@"; 
   ctx.fillText(`Score: ${value}`, x, y); #draw text
-
+* requestAnimationFrame(func) # Insert in func before last curle braces, func will be executed over and over, browser will sync the frame rate accordingly and render the shapes only when needed
