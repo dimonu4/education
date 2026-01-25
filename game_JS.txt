@@ -7,20 +7,31 @@
   const ctx=canvas.getContext("2d");
   # to store the 2D rendering context
 
+* fillRect(x, y, width, height) # draws a filled rectangle
+  strokeRect(x, y, width, height)
+  ctx.clearRect(x, y, width, height) 
+  
 * ctx.beginPath();
   ctx.rect(20,40,50,50); # x,y,height,width of rectangle
   ctx.fillStyle = '#FF0000'; /"red" /'rgb(0 0 255 / 50%)'
   ctx.fill();
   ctx.closePath();
 
+* arc(x, y, radius, startAngle, endAngle, counterclockwise)
+  arcTo(x1, y1, x2, y2, radius) # Draws an arc with the given control points and radius, connected to the previous point by a straight line
 * ctx.arc(240,160,20,0,Math.PI*2,false); # x,y of arc center, arc radius, start and end angle in radians, direction of drawing(false for clockwise, default or anti-clockwise -true)
 
 * ctx.stroke() # color only the outer stroke
-
-* ctx.clearRect(x, y, a, b) # x and y coordinates of top left corner, and a and b coordinates of the bottom right corner of a rectangle, the whole area covered by this rectangle will be cleared of any content previously painted there
 
 * document.location.reload() # reload page
 
 * ctx.font = "16px Arial@"; 
   ctx.fillText(`Score: ${value}`, x, y); #draw text
 * requestAnimationFrame(func) # Insert in func before last curle braces, func will be executed over and over, browser will sync the frame rate accordingly and render the shapes only when needed
+** Drawing paths
+   * beginPath() # Creates a new path. Once created, future drawing commands are directed into the path and used to build the path up.
+   * closePath() # Adds a straight line to the path, going to the start of the current sub-path.
+   * stroke() # Draws the shape by stroking its outline.
+   * fill() # Draws a solid shape by filling the path's content area.
+   * moveTo(x, y) # specifically set your starting position after resseting a path
+   * lineTo(x, y) # Draws a line from the current drawing positon to the positon specified by x and y.
