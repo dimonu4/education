@@ -28,6 +28,7 @@
 * ctx.font = "16px Arial@"; 
   ctx.fillText(`Score: ${value}`, x, y); #draw text
 * requestAnimationFrame(func) # Insert in func before last curle braces, func will be executed over and over, browser will sync the frame rate accordingly and render the shapes only when needed
+
 ** Drawing paths
    * beginPath() # Creates a new path. Once created, future drawing commands are directed into the path and used to build the path up.
    * closePath() # Adds a straight line to the path, going to the start of the current sub-path.
@@ -35,3 +36,7 @@
    * fill() # Draws a solid shape by filling the path's content area.
    * moveTo(x, y) # specifically set your starting position after resseting a path
    * lineTo(x, y) # Draws a line from the current drawing positon to the positon specified by x and y.
+
+** Bezier and quadratic curves
+   * quadraticCurveTo(cp1x, cp1y, x, y)
+   * bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y) # Draws a cubic Bezier curve from the current pen position to the end point specified by x and y, using the control points specified by cp1x, cp1y and cp2x, cp2y
