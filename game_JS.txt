@@ -40,3 +40,14 @@
 ** Bezier and quadratic curves
    * quadraticCurveTo(cp1x, cp1y, x, y)
    * bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y) # Draws a cubic Bezier curve from the current pen position to the end point specified by x and y, using the control points specified by cp1x, cp1y and cp2x, cp2y
+
+** Colors
+   * fillStyle = color # Sets the style used when filling shapes
+   * strokeStyle = color # Sets the style for shapes' outlines
+
+** Transparency
+   * globalAlpha = transparencyValue # Applies the specified transparency value to all future shapes, 0.0(fully transparent) 1.0(fully opaque
+   * ctx.fillStyle = "rgb(255 0 0 / 50%)" # 0% fully transparent
+
+** Line styles
+  * lineWidth = value # Sets the width of lines drawn in the future
