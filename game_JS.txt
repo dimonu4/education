@@ -25,8 +25,17 @@
 
 * document.location.reload() # reload page
 
-* ctx.font = "16px Arial@"; 
-  ctx.fillText(`Score: ${value}`, x, y); #draw text
+** Drawing text
+   * ctx.font = "16px Arial@"; 
+   * ctx.fillText(text , x, y, [, maxWidth]); # Fills a given text at the given(x,y) position. Optionally with a maximum width to draw.
+   * strokeText(text, x, y, [, maxWidth]
+   * Styling text
+     font = value; # default '10px sans-serif'
+     textAlign = value; # text alignment: start(def), end, left, right, center
+     textBaseline = value # baseline alignment: top, hanging, middle, alphabetic(def), ideographic, bottom
+     direction = value # ltr, rtl, inherit(def)
+     
+
 * requestAnimationFrame(func) # Insert in func before last curle braces, func will be executed over and over, browser will sync the frame rate accordingly and render the shapes only when needed
 
 ** Drawing paths
@@ -51,3 +60,16 @@
 
 ** Line styles
   * lineWidth = value # Sets the width of lines drawn in the future
+
+** Path2D Object
+   * const rectangle = new Path2D();
+     rectangle.rect(10, 10, 50, 50);
+     ctx.stroke(rectangle);
+
+** Patterns
+   * createPattern(image, type)
+   repeat - # tiles image in both vertical and horizontal
+   repeat-x # tiles image horizontaly
+   repeat-y # tiles image vertically
+   no-repeat # doesn't tile the image, it's used only once
+
