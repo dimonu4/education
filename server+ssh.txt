@@ -1,0 +1,9 @@
+* ssh login@server_adress -p port # enter server
+
+* ssh-keygen # Create key
+* ssh-add # Notify system about key
+* cat ~/.ssh/id_rsa.pub # Display public key
+* vim ~/.ssh/authorised_keys # edit authorised keys on the server
+
+* scp -P port login@server_adress:path1 path2 # Copy from server(path1) to client(path2)
+  scp -P port path1 login@server_adress:path2 # Copy from client(path1) to server(path2)

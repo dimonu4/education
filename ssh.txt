@@ -1,4 +1,0 @@
-* ssh-keygen # Create key
-* ssh-add # Notify system about key
-* cat ~/.ssh/id_rsa.pub # Display public key
-* vim ~/.ssh/authorised_keys # edit authorised keys on the server
