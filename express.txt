@@ -1,5 +1,32 @@
 const express = require("express");
 const app = express();
 
-app.get("/", ( req, res )=>{} )
+app.use( express.json() ) # To allow accessing the body
+
+*app.get("/", ( req, res )=>{} )
+*app.post("/", (res)=>{} )
+*app.put("/path/:id", (req, res)=>{
+  const dataId = req.params.id;
+  const requestData = req.body;
+  res.status().send();
+})
+
 app.listen( port, ()=>{} );
+
+===============================
+GET
+
+POST
+
+PUT https://path.to # for uodating or replacing existing data on server
+Host: path.to
+Content-Type: application/json
+{
+  "key":"value",
+  "key1":["value1"]
+}
+
+PATCH https://path.to/id
+{
+  "value":"key",
+}
