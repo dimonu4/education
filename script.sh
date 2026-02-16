@@ -4,7 +4,7 @@ again=yes
 while [[ again=yes ]]
 do
 	read num1 num2
-	if [[ $num1 -eq "" ]]
+	if [[ $num1 -eq "" || $num2 -eq "" ]]
 	then
 		echo bye
 		break
@@ -18,9 +18,11 @@ do
 		fi
 		if [[ $1 -gt $2 ]]
 		then
-			gcd let "$1 - $2" $2
+			let "arg1 = $1 - $2"
+			gcd $arg1 $2
 		else
-			gcd $1 let "$2 - $1"
+			let "arg2 = $2 - $1"
+			gcd $1 $arg2
 		fi
 	}
 	gcd $num1 $num2
