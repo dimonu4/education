@@ -1,0 +1,3 @@
+* set terminal dumb
+* set terminal png size 1448, 720
+* set output "~/storage/downloads/graph.png"
