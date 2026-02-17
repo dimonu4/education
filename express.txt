@@ -10,6 +10,16 @@ app.use( express.json() ) # To allow accessing the body
   const requestData = req.body;
   res.status().send();
 })
+* app.patch("/end/point/:id", (req, res)=>{
+    const userId = req.params.id;
+    const requestData = req.body; # only send specific changes to the resource, missing fields remain unchanged
+  }
+
+* app.delete( "/end/point/:id", (req, res)=>{
+    const userId = req.params.id;
+    res.status(204);
+    res.status(200).send()
+}
 
 app.listen( port, ()=>{} );
 
@@ -27,6 +37,11 @@ Content-Type: application/json
 }
 
 PATCH https://path.to/id
+Host: path.to
+Content-type: application/json
 {
   "value":"key",
 }
+
+DELETE https://path.to/type_of_resource/id # Delete data from server
+
