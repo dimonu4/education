@@ -4,7 +4,9 @@ const app = express();
 app.use( express.json() ) # To allow accessing the body
 
 *app.get("/", ( req, res )=>{} )
-*app.post("/", (res)=>{} )
+*app.post("/", (res)=>{
+  res.status(201).send();
+} )
 *app.put("/path/:id", (req, res)=>{
   const dataId = req.params.id;
   const requestData = req.body;
@@ -17,7 +19,7 @@ app.use( express.json() ) # To allow accessing the body
 
 * app.delete( "/end/point/:id", (req, res)=>{
     const userId = req.params.id;
-    res.status(204);
+    res.status(204); #204 - no content
     res.status(200).send()
 }
 
