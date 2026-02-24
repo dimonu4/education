@@ -1,0 +1,4 @@
+const Database = require( "beter-sqlite3" );
+const db = new Database( "./database.bd" );
+
+db.exec( ` CREATE TABLE pets (name TEXT, species TEXT) ` );db.exec( ` INSERT INTO pets (name, species) VALUES ("Tom", "cat"), ("Jerry", "mouse") `);
