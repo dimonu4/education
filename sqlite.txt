@@ -1,4 +1,25 @@
 const Database = require( "beter-sqlite3" );
 const db = new Database( "./database.bd" );
 
-db.exec( ` CREATE TABLE pets (name TEXT, species TEXT) ` );db.exec( ` INSERT INTO pets (name, species) VALUES ("Tom", "cat"), ("Jerry", "mouse") `);
+db.exec(` 
+         CREATE TABLE IF NOT EXIST pets (
+	   id INTEGER PRIMARY KEY AUTOINCREMENT,
+	   name TEXT NOT NULL,
+	   species TEXT NOT NULL
+	 )
+       `);
+db.exec( ` INSERT INTO pets (name, species) VALUES ("Tom", "cat"), ("Jerry", "mouse") `);
+const getUserQuery = db.prepare( " SELECT * FROM pets ");#Prepares SQL query for execution
+const pets = getUserQuery.all(); # get all rows from uery
+const onePet = getUserQuery.get() # get one string
+
+const getUserByIdQuery = db.prepare(" SELECT * FROM users WHERE id = ? ") # ? is a placeholder
+const user = getUserByIdQuery.get( 3 ); # get user with id 3
+getUserByIdQuery.run( 3 ); # another way
+
+const insertFriend = db.prepare(" INSERT INTO friends (name) VALUES (?) ");
+const insertTransaction = db.transaction( (names)=>{
+  for( name of names ) insertFriend.run(name)
+});
+
+module.exports = db;
