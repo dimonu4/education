@@ -2,7 +2,10 @@ const express = require("express");
 const app = express();
 
 app.use( express.json() ) # To allow accessing the body
+# use it's a middleware that parse json date into js object# express.urlencoded() url encoded data from forms
 
+*app.posy("/songs", express.json, (req, res)= {
+}) # adding middleware only to selected routes in second argument
 *app.get("/", ( req, res )=>{} )
 *app.post("/", (res)=>{
   res.status(201).send();
