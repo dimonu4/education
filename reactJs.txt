@@ -1,0 +1,12 @@
+  * Create-react-app # library for creating and adjusting necessary instruments for development apps by React, it adjust Webpack, Babel, Jest
+  * import React from 'react'
+  * import RectDOM from 'react-dom'
+  * const element = React.createElement(
+      'h1', # element
+      {className: "element"}, # attributes
+      'inner Text'
+    );
+  * ReactDOM.render(
+      element,
+      document.getElementByid('root')
+    );
